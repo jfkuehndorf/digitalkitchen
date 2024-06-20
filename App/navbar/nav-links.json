@@ -1,0 +1,11 @@
+{
+  "brand": {
+    "name": "Digital Kitchen",
+    "url": "/App/pages/landing/index.html"
+  },
+  "links": [
+    { "name": "Explore", "url": "/App/pages/explore/explore.html" },
+    { "name": "Community", "url": "/App/pages/community/community.html" },
+    { "name": "Profile", "url": "/App/pages/profile/profile.html" }
+  ]
+}

@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  position: relative;
+  font-family: Arial, sans-serif;
+  background-color: rgba(200, 200, 200, 0.2);
+}
+
+.navbar {
+  background-color: rgba(0, 0, 125, 0.9);
+}
+
+.navbar-nav .nav-link {
+  margin-left: 3rem;
+}
+
+.current {
+  border-bottom: solid 1px red;
+}
+
+.btn-primary:hover {
+  background-color: #1abc9c;
+  color: #34495e;
+}
+.settings-dropdown {
+  
+  top: 50px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.settings-dropdown .btn-secondary {
+  background-color: rgba(0, 0, 125, 0.9);
+  border: none;
+}
+
+.settings-dropdown .dropdown-menu {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-item {
+  color: rgba(0, 0, 125, 0.9);
+}
+
+.dropdown-item:hover {
+  background-color: rgba(200, 200, 200, 0.2);
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.profile-name {
+  font-size: 1.5em;
+  color: rgba(0, 0, 125, 0.9);
+  margin-top: 10px;
+}
+
+.profile-info {
+  color: rgba(0, 0, 125, 0.9);
+  margin-top: 5px;
+}
+
+.post-section {
+  min-width: 500px;
+}
+
+.post-title {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.post-content {
+  font-size: 0.9em;
+  padding: 5px 30px;
+}
+
+.post-card {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  flex-shrink: 0;
+  flex-basis: auto;
+  margin-bottom: 20px;
+  border-radius: 5px; /* Consistent with profile details */
+  background-color: #f8f9fa;
+  color: rgba(0, 0, 125, 0.9);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  text-align: center;
+}
+
+/* Top part of Your Posts */
+
+.posts-top {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.posts-top div {
+  width: 103.35px;
+}
+
+.posts-top img {
+  height: 20px;
+  width: auto;
+  filter: invert(79%) sepia(100%) saturate(0%) hue-rotate(185deg) brightness(108%) contrast(101%);
+}
+
+.posts-top button {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 125, 0.9);
+  color: white;
+  border: solid 1px darkblue;
+  border-radius: 20px;
+  padding: 0 5px;
+  justify-content: space-between;
+}
+
+.posts-top button p {
+  margin: 0;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.posts-top button:hover{
+  background-color: #FA2A55;
+  color: #34495e;
+}
+
+.post-card img{
+  width: 200px;
+  height: auto;
+  margin: 5px 20px;
+}
+
+/* Utility Classes */
+.card {
+  border: none !important;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title, .card-text {
+  color: rgba(0, 0, 125, 0.9) !important;
+}
+
+.btn {
+  border-radius: 20px;
+  width: 150px;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 125, 0.9);
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+  padding-top: 20px;
+}
+
+.profile-details {
+  width: 100%; /* Adjust width for better control */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Enhance shadow for depth */
+}
+
+.posts-section {
+  width: 100%; /* Full width for better alignment */
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.posts-section h2 {
+  text-align: center;
+}

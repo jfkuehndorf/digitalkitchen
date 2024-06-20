@@ -1,0 +1,170 @@
+* {
+  border: none;
+}
+
+.card {
+  border: none !important;
+}
+
+body {
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
+hr {
+  margin: 10px;
+}
+
+.svg-post {
+  height: 1em;
+  margin-right: 10px;
+  filter: invert(25%) sepia(11%) saturate(1829%) hue-rotate(169deg) brightness(92%) contrast(85%);
+}
+
+.main-section {
+  display: flex;
+  flex-wrap: wrap; 
+  grid-template-columns: 1fr 1.3fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  overflow-y: auto;
+  justify-content: center;
+  height: calc(100vh - 104px);
+}
+
+.left, .right, .middle {
+  flex: 1 1 100%; /* By default, take full width on small screens */
+}
+
+@media (min-width: 768px) { /* Adjust this breakpoint as needed */
+  .left, .right {
+    flex: 1; /* Takes up less space than the middle section on larger screens */
+  }
+  .left {
+    margin-left: 150px;
+  }
+  .middle {
+    flex: 2; /* Middle section takes more space */
+  }
+  .right {
+    margin-right: 150px;
+
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .main-section {
+    margin: 0 15px;
+  }
+  .middle {
+    order: -1;
+  }
+}
+
+.left {
+  /* margin-left: 150px; */
+  height: auto;
+}
+
+.left > .card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  color: rgba(0, 0, 125, 0.9) !important;
+  display: flex;
+}
+
+.left > .card >.card-body > .card-title {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.right {
+  /* margin-right: 150px; */
+  height: aut;
+}
+
+.right > .card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  color: rgba(0, 0, 125, 0.9) !important;
+  display: flex;
+}
+
+.right > .card >.card-body > .card-title {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+.middle > .card {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  color: rgba(0, 0, 125, 0.9) !important;
+  display: flex;
+  
+}
+
+.middle > .makePost > .card-body > .mb-3 > label {
+  color: rgba(0, 0, 125, 0.9) !important;
+  font-weight: 700;
+}
+
+.middle > .makePost > .card-body > .mb-0 > label {
+  color: rgba(0, 0, 125, 0.9) !important;
+  font-weight: 700;
+}
+
+.submitPost {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submitPost > .btn {
+  border-radius: 20px;
+  width: 75px;
+}
+
+.postDescription {
+  color: black !important;
+  font-size: 0.92em !important;
+}
+
+.makePostAccordion {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.makePostAccordion > .accordion-item > .accordion-header > button {
+  color: rgba(0, 0, 125, 0.9) !important;
+  font-weight: 300;
+  font-size: 0.5em !important;
+}
+
+.advance {
+  transition: all 0.5s ease;
+}
+
+.advance:hover {
+  transform: scale(1.10);
+}
+
+.recipeName {
+  font-weight: 300 !important;
+}
+
+.side-section > a {
+  text-decoration: none;
+  color: rgba(0, 0, 125, 0.9) !important;
+  transition: all 0.3s ease;
+}
+
+.side-section > a:hover {
+  color: lightblue !important;
+}
+
+
+

@@ -1,0 +1,76 @@
+* {
+  border: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+.titleSection {
+  margin-top: 80px;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Courier new', monospace !important;
+}
+
+.titleSection > h1 {
+  font-family:"Poppins", sans-serif;
+  font-weight: 100;
+  color: rgba(0, 0, 125, 0.9) !important;
+  font-size: 5em;
+}
+
+.card-section {
+  margin-top: 40px;
+  
+  width: 970px;
+  display: flex;
+  justify-content: space-around !important;
+}
+
+.card-section > .card {
+  height: 240px;
+  
+  width: 200px;
+  border: none !important;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transition: all 0.5s ease;
+}
+
+.card-section > .card:hover {
+  transform: scale(1.05); 
+}
+
+.card-section > .card > .card-body > .card-text {
+  height: 126px;
+  display: flex;
+  align-items: center !important;
+  align-content: center !important;
+  justify-content: center !important;
+}
+
+.card-section > .card > .card-body > .card-title {
+  display: flex;
+  font-size: 2em;
+  font-weight: 200;
+  align-items: center !important;
+  align-content: center !important;
+  justify-content: center !important;
+}
+
+.card-section > .card > .card-body > .card-text > a {
+  color: black !important;
+}
+
+.card-section > .card > .card-body > .card-text > a:hover {
+  color: rgba(0, 0, 125, 0.9) !important;
+}

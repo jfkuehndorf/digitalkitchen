@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "postNum": "1",
+      "name": "Chicken Quesadilla",
+      "description": "Chicken filled grilled tortilla, with cheddar cheese",
+      "instructions": "Grill the chicken. Then pan fry the onions, and peppers. Then assemble the Quesadilla, and grill till golden brown.",
+      "ingredients": "Chicken, Torilla, Onion, Pepper, Cheddar Cheese"
+    },
+    {
+      "postNum": "2",
+      "name": "Steak Quesadilla",
+      "description": "Steak filled grilled tortilla, with cheddar cheese",
+      "instructions": "Grill the steak. Then pan fry the onions, and peppers. Then assemble the Quesadilla, and grill till golden brown.",
+      "ingredients": "Steak, Torilla, Onion, Pepper, Cheddar Cheese"
+    }
+  ]
+}

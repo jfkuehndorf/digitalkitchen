@@ -1,0 +1,18 @@
+/* Navbar specific styles */
+.navbar {
+  background-color: rgba(0, 0, 125, 0.9);
+}
+
+.navbar-nav .nav-link {
+  margin-left: 3rem;
+}
+
+.navbar-nav .nav-link.current {
+  border-bottom: solid 1px #FA2A55;
+}
+
+@media only screen and (max-width: 991px) {
+  .nav-item {
+    width: 150px !important;
+  }
+}
