@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const navContainer = document.getElementById('navbar-container');
-  const currentPath = window.location.pathname; // Full path including folder and file
+  const currentPath = window.location.pathname; 
 
   fetch('../../navbar/nav-links.json')
     .then(response => response.json())
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         a.className = 'nav-link';
         a.href = link.url;
         a.textContent = link.name;
-        if (currentPath.includes(link.url)) { // Checks if the current full path contains the link URL
+        if (currentPath.includes(link.url)) { 
           a.classList.add('current');
         }
         li.appendChild(a);
