@@ -42,18 +42,18 @@ hr {
 }
 
 .left, .right, .middle {
-  flex: 1 1 100%; /* By default, take full width on small screens */
+  flex: 1 1 100%; 
 }
 
-@media (min-width: 768px) { /* Adjust this breakpoint as needed */
+@media (min-width: 768px) {
   .left, .right {
-    flex: 1; /* Takes up less space than the middle section on larger screens */
+    flex: 1; 
   }
   .left {
     margin-left: 150px;
   }
   .middle {
-    flex: 2; /* Middle section takes more space */
+    flex: 2; 
   }
   .right {
     margin-right: 150px;
