@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       navContainer.appendChild(nav);
     
-      console.log("Current path for comparison:", currentPath); // Shows the current path being used for matching
+      console.log("Current path for comparison:", currentPath); 
     })
     .catch(error => console.error('Error loading the navigation data: ', error));
 });
