@@ -28,27 +28,64 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-    
+
     function displayRecipes(recipes) {
         recipeContainer.innerHTML = "";
         if (recipes && recipes.length) {
             recipes.forEach(meal => {
                 const mealElement = document.createElement('div');
-                mealElement.innerHTML = `<h3>${meal.strMeal}</h3><img src="${meal.strMealThumb}" alt="${meal.strMeal}"><p>${meal.strInstructions}</p>`;
+                mealElement.innerHTML = `
+                    <h3>${meal.strMeal}</h3>
+                    <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+                    <button class="btn btn-primary make-button">Make!</button>`;
                 recipeContainer.appendChild(mealElement);
+
+                const makeButton = mealElement.querySelector(".make-button");
+                makeButton.addEventListener("click", function () {
+                    renderRecipe(meal.strMeal);
+                })
             });
         } else {
             recipeContainer.innerHTML = '<p>No recipes found.</p>';
         }
     }
 
+    function renderRecipe(mealName) {
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`)
+            .then(response => response.json())
+            .then(data => {
+                const meal = data.meals[0];
+                recipeContainer.innerHTML = `
+                    <div class="recipe-details-container">
+                        <button class="back-button">Back</button>
+                        <div class="recipe-details">
+                            <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+                            <h2>${meal.strMeal}</h2>
+                            <h3>Ingredients</h3>
+                            <ul>
+                                ${Object.keys(meal)
+                                    .filter(key => key.startsWith("strIngredient") && meal[key])
+                                    .map(key => `<li>${meal[key]}</li>`)
+                                    .join('')}
+                            </ul>
+                            <p>${meal.strInstructions}</p>
+                            <iframe width="560" height="315" src="${meal.strYoutube.replace("watch?v=", "embed/")}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>`;
+
+                const backButton = document.querySelector(".back-button");
+                backButton.addEventListener("click", () => {
+                    fetchRecipes();
+                })
+            })
+    }
     function fetchRecipes() {
         if (selectedIngredients.length > 0) {
             const ingredientQuery = selectedIngredients.join(",");
             fetch(`https://www.themealdb.com/api/json/v2/1/filter.php?i=${ingredientQuery}`)
                 .then(response => response.json())
                 .then(data => {
-                    displayRecipes(data.meals);
+                    displayRecipes(data.meals || []);
                 });
         } else {
             displayRecipes([]);
