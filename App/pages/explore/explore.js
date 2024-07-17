@@ -14,8 +14,21 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.json())
         .then(data => {
             ingredients = data.meals.map(meal => meal.strIngredient);
+            ingredients.forEach(addResult);
         });
-
+    
+    function addResult(entryObject) {
+        const ingredientElement = document.createElement("div");
+        ingredientElement.textContent = entryObject;
+        ingredientElement.addEventListener("click", () => {
+            if (!selectedIngredients.includes(entryObject)) {
+                selectedIngredients.push(entryObject);
+                updateSelectedIngredientsDisplay();
+                fetchRecipes();
+            }
+        });
+    }
+    
     function displayRecipes(recipes) {
         recipeContainer.innerHTML = "";
         if (recipes && recipes.length) {
